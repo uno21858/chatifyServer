@@ -13,7 +13,7 @@ const io = new Server(server, {
 
 // DB setup
 const db = new pg.Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://localhost:5432/chatify'
+    connectionString: process.env.DATABASE_URL
 });
 
 await db.query(`
