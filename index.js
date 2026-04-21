@@ -13,6 +13,8 @@ const io = new Server(server, {
 });
 
 // DB setup
+console.log('DATABASE_URL:', process.env.DATABASE_URL ?? 'UNDEFINED');
+
 const db = new pg.Pool({
     connectionString: process.env.DATABASE_URL
 });
